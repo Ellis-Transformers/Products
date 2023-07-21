@@ -2,6 +2,7 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
+
 async function getProductById(productId) {
     const product = await prisma.product.findFirst({
       where: {
