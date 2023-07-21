@@ -54,7 +54,7 @@ let Products = async (req, res) => {
 let ProductInfo = async (req, res) => {
     try {
       const products = await getProductById(req.params.id);
-      res.status(products);
+      res.send(products);
       cacheForMe(req.url, products)   
     } catch (error) {
       console.error('Error:', error);
